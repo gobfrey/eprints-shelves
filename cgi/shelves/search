@@ -1,0 +1,72 @@
+# EPrints Services/Shelves
+# search for shelves, alla google suggest
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+binmode( STDOUT, ":utf8" );
+$session->send_http_header( content_type => "application/json" );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+	$session->terminate;
+	return;
+}
+
+my $eprintid = $session->param( 'eprintid' );
+unless( defined $eprintid && $eprintid =~ /^\d+$/ )
+{
+        $session->terminate;
+        return;
+}
+
+my $request = $session->param( 'q' );
+unless( defined $request && length $request > 2 )
+{
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Your query must be 3 characters or more.</div>' } );
+	$session->terminate;
+	return;
+}
+
+my $db = $session->get_database;
+my $Q_request = $db->quote_value( '%'.EPrints::Database::prep_like_value($request ).'%' );
+my $Q_id = $db->quote_identifier( 'shelfid' );
+my $Q_table = $db->quote_identifier( 'shelf' );
+
+my $sql = "SELECT $Q_id FROM $Q_table WHERE (
+		title ".$db->sql_LIKE()." $Q_request OR
+		description ".$db->sql_LIKE()." $Q_request
+	) ";
+
+my $sth = $db->prepare_select( $sql, 'limit' => 50 );
+$db->execute( $sth , $sql );
+
+my @shelves;
+
+my $ds = $session->dataset( 'shelf' );
+
+while( my @row = $sth->fetchrow )
+{
+	my $record = $ds->dataobj( $row[0] );
+	next unless( defined $record );
+
+	next unless( $record->has_editor( $user ) );
+
+        my $id = $record->get_id;
+        my $title = $record->get_value( 'title' ) || "Shelf #$id";
+
+	my $ep_in_shelf = $record->is_in_shelf( $eprintid );
+
+	push @shelves, { id => $id, title => $title, is_eprint => $ep_in_shelf };
+}
+
+print STDOUT JSON::encode_json( { shelves => \@shelves } );
+
+$session->terminate;

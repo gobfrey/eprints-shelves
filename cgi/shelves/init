@@ -1,0 +1,34 @@
+# EPrints Services/Shelves
+# Returns the currently selected Shelf for the current user (via a Cookie)
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+	# no need to print/return a message to the user since this is the 'init'
+        $session->terminate;
+	return;
+}
+
+# get shelfid from cookie, and throw it back
+
+my $cookie = EPrints::Apache::AnApache::cookie(
+	$session->{request},
+	"eprints_shelfid" );
+
+binmode( STDOUT, ":utf8" );
+$session->send_http_header( content_type => "application/json" );
+
+if( defined $cookie && $cookie =~ /^\d+$/ )
+{
+	print STDOUT JSON::encode_json( { shelfid => $cookie } );
+}
+
+$session->terminate;

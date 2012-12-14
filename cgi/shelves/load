@@ -1,0 +1,56 @@
+# EPrints Services/Shelves
+# Returns all the EPrintIds contained in the selected Shelf
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+        $session->terminate;
+	return;
+}
+
+my $shelfid = $session->param( 'shelfid' );
+
+unless( defined $shelfid )
+{
+	return;
+}
+
+# instanciate shelf, check current user has the perms to write to it
+
+my $shelf = $session->dataset( 'shelf' )->dataobj( $shelfid );
+unless( defined $shelf )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Shelf #'.$shelfid.' does not exist.</div>' } );
+        $session->terminate;
+	return;
+}
+
+unless( $shelf->has_editor( $user ) )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You may not modify this Shelf.</div>' } );
+        $session->terminate;
+	return;
+}
+
+binmode( STDOUT, ":utf8" );
+
+$session->send_http_header( content_type => "application/json" );
+
+my $ids = $shelf->get_item_ids();
+my $title = $shelf->get_value( 'title' ) || "Shelf #$shelfid";
+
+print STDOUT JSON::encode_json( { shelf_ids => $ids, shelf_title => $title } );
+
+$session->terminate;

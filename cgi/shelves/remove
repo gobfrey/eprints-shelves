@@ -1,0 +1,51 @@
+# EPrints Services/Shelves
+# Removes an EPrintId from a selected Shelf
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+        $session->terminate;
+	return;
+}
+
+my $shelfid = $session->param( 'shelfid' );
+my $eprintid = $session->param( 'eprintid' );
+
+unless( defined $shelfid && defined $eprintid )
+{
+	$session->terminate;
+	return;
+}
+
+# instanciate shelf, check current user has the perms to write to it
+
+my $shelf = $session->dataset( 'shelf' )->dataobj( $shelfid );
+unless( defined $shelf )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Shelf #'.$shelfid.' does not exist.</div>' } );
+        $session->terminate;
+	return;
+}
+
+unless( $shelf->has_editor( $user ) )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You may not modify this Shelf.</div>' } );
+        $session->terminate;
+	return;
+}
+
+$shelf->remove_items( $eprintid );
+
+$session->terminate;

@@ -1,0 +1,41 @@
+# EPrints Services/Shelves
+# Selects a Shelf (stores its Id to a Cookie)
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+        $session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+        $session->terminate;
+	return;
+}
+
+my $shelfid = $session->param( 'shelfid' );
+
+unless( defined $shelfid )
+{
+	$session->terminate;
+	return;
+}
+
+# store cookie
+my $cookie = $session->query->cookie(
+	-name    => "eprints_shelfid",
+	-path    => "/",
+	-value   => $shelfid,
+	-expires => "+10y", # really long time
+	-domain  => $session->config("cookie_domain"),
+);
+
+my $r = $session->{request};
+$r->err_headers_out->{"Set-Cookie"} = $cookie;
+
+$session->terminate;

@@ -1,0 +1,64 @@
+# EPrints Services/Shelves
+# Returns all Shelves available (writable) for the current user
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+binmode( STDOUT, ":utf8" );
+$session->send_http_header( content_type => "application/json" );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+	$session->terminate;
+	return;
+}
+
+my $search = new EPrints::Search(
+	filters => [
+		{
+			meta_fields=>[ 'userid', 'adminids', 'editorids' ],
+			value=> $user->get_id,
+			match=>'EX',
+			describe=>0,
+		},
+	],
+	custom_order => "-lastmod",
+	session => $session,
+	dataset => $session->dataset( 'shelf' ),
+	allow_blank => 1,
+);
+
+my $shelves = $search->perform_search;
+
+unless( $shelves->count > 0 )
+{
+	print STDOUT JSON::encode_json( { shelves => [] } );
+	$session->terminate;
+	return;
+}
+
+my @json_shelves;;
+
+$shelves->map( sub {
+	my( $session, $ds, $record, $info ) = @_;
+
+	push @json_shelves, {
+		id => $record->get_id,
+		title => $record->is_set( "title" ) ? $record->get_value( "title" ) : "Shelf #" . $record->get_id 
+	};
+
+}, {} );
+
+print STDOUT JSON::encode_json( { shelves => \@json_shelves } );
+
+$session->terminate;
+
+
+

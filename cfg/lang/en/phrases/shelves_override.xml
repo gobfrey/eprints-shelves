@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+
+<!-- override default export bar on search page to include shelves -->
+<epp:phrase id="lib/searchexpression:export_section">
+<table width="100%"><tr>
+  <td align="left">Export <epc:pin name="count" /> results as <epc:pin name="menu"/><epc:pin name="button"/></td>
+  <td align="right"><epc:pin name="feeds"/></td>
+</tr>
+<tr>
+  <td align="left" colspan="2">
+    <epc:pin name="tools"/>
+  </td>
+</tr>
+<tr>
+  <td align="left" colspan="2">
+    <div id="shelves" class="ep_only_js"></div>
+    <script type="text/javascript">
+                var EPJS_shelves_object;
+                document.observe("dom:loaded",function(){
+                        EPJS_shelves_object = new EPJS_Shelves_Search();
+                });
+    </script>
+  </td>
+</tr>
+</table>
+</epp:phrase>
+
+</epp:phrases>

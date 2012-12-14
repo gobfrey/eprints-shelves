@@ -1,0 +1,87 @@
+# EPrints Services/Shelves
+# show all the shelves the current user can edit, with a compulsory eprintid param. This eprintid is checked whether it is in the shelves or not.
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+	$session->send_http_header( content_type => "application/json" );
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+	$session->terminate;
+	return;
+}
+
+my $eprintid = $session->param( 'eprintid' );
+
+unless( defined $eprintid && $eprintid =~ /^\d+$/ )
+{
+	$session->terminate;
+	return;
+}
+
+my $search = new EPrints::Search(
+	filters => [
+		{
+			meta_fields=>[ 'items' ],
+			value=> $eprintid,
+			match=>'EX',
+			describe=>0,
+		},
+	],
+	session => $session,
+	dataset => $session->dataset( 'shelf' ),
+	allow_blank => 1,
+);
+
+my $list = $search->perform_search();
+
+my $ids = $list->get_ids;
+
+my %shelves_map = map { $_ => 1 } @$ids;
+
+##################
+
+my $shelves_search = new EPrints::Search(
+        filters => [
+                {
+                        meta_fields=>[ 'userid', 'adminids', 'editorids' ],
+                        value=> $user->get_id,
+                        match=>'EX',
+                        describe=>0,
+                },
+        ],
+        session => $session,
+        dataset => $session->dataset( 'shelf' ),
+	custom_order => "-lastmod",
+	allow_blank => 1,
+);
+
+my $results = $shelves_search->perform_search;
+
+my @shelves;
+
+$results->map( sub {
+        my( $session, $ds, $record, $info ) = @_;
+
+	my $id = $record->get_id;
+	my $title = $record->get_value( 'title' ) || "Shelf #$id";
+
+	# is the eprintid in that shelf?
+	my $ep_in_shelf = $shelves_map{$record->get_id} ? '1':'0';
+
+	push @shelves, { id => $id, title => $title, is_eprint => $ep_in_shelf };
+}, {} );
+
+$session->send_http_header( content_type => "application/json" );
+binmode( STDOUT, ":utf8" );
+
+print STDOUT JSON::encode_json( { shelves => \@shelves } );
+
+$session->terminate;

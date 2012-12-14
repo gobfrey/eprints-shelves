@@ -1,0 +1,39 @@
+# EPrints Services/Shelves
+# Creates a new Shelf, optionally with a title
+
+use EPrints;
+
+use strict;
+use warnings;
+
+my $session = EPrints::Session->new();
+exit(0) unless( defined $session );
+
+binmode( STDOUT, ":utf8" );
+$session->send_http_header( content_type => "application/json" );
+
+my $user = $session->current_user;
+unless( defined $user )
+{
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
+	$session->terminate;
+	return;
+}
+
+my $shelf_title = $session->param( 'title' );
+
+my $ds = $session->get_repository->get_dataset( "shelf" );
+
+my $shelf = $ds->create_object( $session, { userid => $user->get_value( "userid" ), title => $shelf_title } );
+$shelf->commit;
+
+if( defined $shelf )
+{
+	print STDOUT JSON::encode_json( { id => $shelf->get_id } );
+}
+else
+{
+	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Failed to create new Shelf</div>' } );
+}
+
+$session->terminate;

@@ -44,9 +44,9 @@
         <file>
           <filename>epm/shelves/cfg/cfg.d/shelves.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>484772ad9b7bdb542e0bec6ad5fb4b44</hash>
+          <hash>3ff7e116dc2dabea66cb8f0711c6712e</hash>
           <hash_type>MD5</hash_type>
-          <filesize>1397</filesize>
+          <filesize>1461</filesize>
         </file>
         <file>
           <filename>epm/shelves/cfg/cfg.d/z_shelf.pl</filename>
@@ -84,13 +84,6 @@
           <filesize>1506</filesize>
         </file>
         <file>
-          <filename>epm/shelves/cfg/static/style/shelves.css</filename>
-          <mime_type>text/plain</mime_type>
-          <hash>327eeb2fcabc95803ddd9fec619cdfd0</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>930</filesize>
-        </file>
-        <file>
           <filename>epm/shelves/cgi/exportshelf</filename>
           <mime_type>text/plain</mime_type>
           <hash>e925d4c8e4da3920bdb72c316eaee4cb</hash>
@@ -114,9 +107,9 @@
         <file>
           <filename>epm/shelves/cgi/shelves/add_search_results</filename>
           <mime_type>text/plain</mime_type>
-          <hash>e1e5b8fc5503815e3506bc3c3b612d75</hash>
+          <hash>76ad9712a29ae4977472fcfee0c6937e</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2141</filesize>
+          <filesize>2612</filesize>
         </file>
         <file>
           <filename>epm/shelves/cgi/shelves/create</filename>
@@ -194,6 +187,13 @@
           <hash>a96c4160677e75c764d5a94dda797260</hash>
           <hash_type>MD5</hash_type>
           <filesize>3802</filesize>
+        </file>
+        <file>
+          <filename>plugins/EPrints/Plugin/Export/AddToShelf.pm</filename>
+          <mime_type>inode/symlink</mime_type>
+          <hash>2e138b827ca57e46220b4ba6936485c4</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1921</filesize>
         </file>
         <file>
           <filename>plugins/EPrints/Plugin/Screen/AddToShelf.pm</filename>
@@ -343,18 +343,11 @@
           <filesize>61501</filesize>
         </file>
         <file>
-          <filename>static/javascript/auto/shelves.js.min.js</filename>
+          <filename>static/javascript/auto/shelves.js</filename>
           <mime_type>inode/symlink</mime_type>
-          <hash>51afdab23d2accc3bd376e88d5b563a0</hash>
+          <hash>0aaad75d338820651d1c4b4d07b52dff</hash>
           <hash_type>MD5</hash_type>
-          <filesize>23826</filesize>
-        </file>
-        <file>
-          <filename>static/javascript/shelves.js</filename>
-          <mime_type>inode/symlink</mime_type>
-          <hash>99a1122534980f94eb4465a70b1604cc</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>35306</filesize>
+          <filesize>35592</filesize>
         </file>
         <file>
           <filename>static/style/images/action_shelf_add.png</filename>

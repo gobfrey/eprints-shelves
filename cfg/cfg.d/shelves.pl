@@ -18,3 +18,4 @@ $c->{plugins}->{"Screen::Shelf::EditItemsActions"}->{params}->{disable} = 0;
 $c->{plugins}->{"Screen::Shelf::EPrint"}->{params}->{disable} = 0;
 $c->{plugins}->{"Screen::Shelves"}->{params}->{disable} = 0;
 $c->{plugins}->{"Screen::Staff::ShelfSearch"}->{params}->{disable} = 0;
+$c->{plugins}->{"Export::AddToShelf"}->{params}->{disable} = 0;

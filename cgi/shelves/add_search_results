@@ -6,75 +6,129 @@ use EPrints;
 use strict;
 use warnings;
 
+
+our $GLOBAL_ERROR; #set by side-effect!
+
+
 my $session = EPrints::Session->new();
 exit(0) unless( defined $session );
 
 my $user = $session->current_user;
 unless( defined $user )
 {
-        $session->send_http_header( content_type => "application/json" );
-	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>' } );
-        $session->terminate;
+	$GLOBAL_ERROR = '<div class=\"epjs_shelves_error\">You must login to use the Shelves</div>';
+	terminate_with_error($session);
 	return;
 }
 
 my $shelfid = $session->param( 'shelfid' );
 my $cacheid = $session->param( 'cacheid' );
+my $search_url = $session->param( 'searchurl');
 
-unless( defined $shelfid && defined $cacheid )
+my $shelf = get_shelf($session, $user, $shelfid);
+
+unless ( defined $shelf || defined $GLOBAL_ERROR )
 {
-	$session->terminate;
+	terminate_with_error($session);
 	return;
 }
 
-# sanity checks first
-my $cachemap = $session->dataset( 'cachemap' )->dataobj( $cacheid );
 
-unless( defined $cachemap )
+my $ids;
+if (defined $cacheid)
 {
-	# perhaps it timed-out
-	$session->send_http_header( content_type => "application/json" );
-	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Search expired. Try starting another search.</div>' } );
-	$session->terminate;
+	$ids = list_ids_from_cache_id($session, $user, $cacheid);
+}
+elsif (defined $search_url)
+{
+	$ids = list_ids_from_search_url($session, $search_url);
+}
+
+if ( (!defined $ids) || (defined $GLOBAL_ERROR) )
+{
+	terminate_with_error($session);
 	return;
 }
 
-my $cache_owner_id = $cachemap->get_value( "userid" );
-my $user_id = $user->get_id;
+$shelf->add_items( @{$ids} );
 
-unless( "$cache_owner_id" eq "$user_id" )
+$session->terminate;
+
+
+
+sub list_ids_from_cache_id
 {
-	$session->send_http_header( content_type => "application/json" );
-	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You do not own this Search.</div>' } );
-	$session->terminate;
-	return;
-}
+	my ($session, $user, $cacheid) = @_;
 
-# instanciate shelf, check current user has the perms to write to it
+	# sanity checks first
+	my $cachemap = $session->dataset( 'cachemap' )->dataobj( $cacheid );
 
-my $shelf = $session->dataset( 'shelf' )->dataobj( $shelfid );
-unless( defined $shelf )
-{
-	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">Shelf #'.$shelfid.' does not exist.</div>' } );
-	$session->terminate;
-	return;
-}
+	unless( defined $cachemap )
+	{
+		# perhaps it timed-out
+		$GLOBAL_ERROR = '<div class=\"epjs_shelves_error\">Search expired. Try starting another search.</div>';
+		return;
+	}
 
-unless( $shelf->has_editor( $user ) )
-{
-	print STDOUT JSON::encode_json( { error => '<div class=\"epjs_shelves_error\">You may not modify this Shelf.</div>' } );
-	$session->terminate;
-	return;
-}
+	my $cache_owner_id = $cachemap->get_value( "userid" );
+	my $user_id = $user->get_id;
 
-my $list = EPrints::List->new(
+	unless( "$cache_owner_id" eq "$user_id" )
+	{
+		$GLOBAL_ERROR = '<div class=\"epjs_shelves_error\">You do not own this Search.</div>';
+		return;
+	}
+
+	my $list = EPrints::List->new(
 		session => $session,
 		dataset => $session->dataset( 'eprint' ),
 		cache_id => $cacheid
-);
+	);
 
-my $ids = $list->ids();
+	return $list->ids;
+}
 
-$shelf->add_items( @$ids );
+sub list_ids_from_search_url
+{
+	
 
-$session->terminate;
+
+}
+
+
+sub get_shelf
+{
+	my ($session, $user, $shelfid) = @_;
+
+	return unless $shelfid;
+
+	# instanciate shelf, check current user has the perms to write to it
+
+	my $shelf = $session->dataset( 'shelf' )->dataobj( $shelfid );
+	unless( defined $shelf )
+	{
+		$GLOBAL_ERROR = '<div class=\"epjs_shelves_error\">Shelf #'.$shelfid.' does not exist.</div>';
+		return;
+	}
+
+	unless( $shelf->has_editor( $user ) )
+	{
+		$GLOBAL_ERROR = '<div class=\"epjs_shelves_error\">You may not modify this Shelf.</div>';
+		return;
+	}
+
+	return $shelf;
+}
+
+sub terminate_with_error
+{
+	my ($session) = @_;
+
+	if ($GLOBAL_ERROR)
+	{
+		$session->send_http_header( content_type => "application/json" );
+		print STDOUT JSON::encode_json( { error => $GLOBAL_ERROR } );
+	}
+	$session->terminate;
+	return;
+}

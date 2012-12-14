@@ -2,711 +2,481 @@
 <epm xmlns='http://eprints.org/ep2/data/2.0' id='http://researchdata.localdomain/id/epm/shelves'>
   <epmid>shelves</epmid>
   <eprintid>211</eprintid>
-  <uri>http://bazaar.eprints.org/id/epm/shelves</uri>
+  <uri>http://researchdata.localdomain/id/epm/shelves</uri>
   <documents>
-    <document id='http://researchdata.localdomain/id/document/1023'>
-      <docid>1023</docid>
-      <rev_number>1</rev_number>
+    <document>
       <files>
-        <file id='http://researchdata.localdomain/id/file/3817'>
-          <fileid>3817</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>citations/shelf/brief.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>e77211af93f8a650e719e66eeff3882e</hash>
           <hash_type>MD5</hash_type>
           <filesize>235</filesize>
-          <mtime>2012-07-02 11:43:51</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3818'>
-          <fileid>3818</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>citations/shelf/default.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>f2a126d40ac7a4a27ef41a3fc9cf4977</hash>
           <hash_type>MD5</hash_type>
           <filesize>463</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3819'>
-          <fileid>3819</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>citations/shelf/result.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>1fa76a55f9ad3d389510d22fe7d80ee7</hash>
           <hash_type>MD5</hash_type>
           <filesize>448</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3820'>
-          <fileid>3820</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>citations/shelf/screen.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>274df0218358f078250ab3b29f886afc</hash>
           <hash_type>MD5</hash_type>
           <filesize>236</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3821'>
-          <fileid>3821</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>citations/shelf/shelf.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>application/xml</mime_type>
           <hash>13d9ca88b58528dfec431614008daba9</hash>
           <hash_type>MD5</hash_type>
           <filesize>515</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3822'>
-          <fileid>3822</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cfg/cfg.d/shelves.pl</filename>
           <mime_type>text/plain</mime_type>
           <hash>484772ad9b7bdb542e0bec6ad5fb4b44</hash>
           <hash_type>MD5</hash_type>
           <filesize>1397</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3823'>
-          <fileid>3823</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cfg/cfg.d/z_shelf.pl</filename>
           <mime_type>text/plain</mime_type>
           <hash>061c183975cbc415a0b9fcc66cf60cbe</hash>
           <hash_type>MD5</hash_type>
           <filesize>1251</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3824'>
-          <fileid>3824</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cfg/cfg.d/z_shelf_dataobj.pl</filename>
-          <mime_type>text/x-c++</mime_type>
+          <mime_type>text/x-java</mime_type>
           <hash>537c6f71be763f5b1b173b7155bee4cc</hash>
           <hash_type>MD5</hash_type>
           <filesize>12661</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3825'>
-          <fileid>3825</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cfg/lang/en/phrases/shelves_override.xml</filename>
           <mime_type>application/xml</mime_type>
           <hash>91d5a361dfd45fb0f04b2051c7da66c6</hash>
           <hash_type>MD5</hash_type>
           <filesize>1011</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3826'>
-          <fileid>3826</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
+          <filename>epm/shelves/cfg/static/style/images/add_to_shelf.png</filename>
+          <mime_type>image/png</mime_type>
+          <hash>8dcfe05b18255c18b7cac2e355c9ea94</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1527</filesize>
+        </file>
+        <file>
+          <filename>epm/shelves/cfg/static/style/images/remove_from_shelf.png</filename>
+          <mime_type>image/png</mime_type>
+          <hash>934c9ed78040ebe8ab73ae5859614f65</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1506</filesize>
+        </file>
+        <file>
+          <filename>epm/shelves/cfg/static/style/shelves.css</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>327eeb2fcabc95803ddd9fec619cdfd0</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>930</filesize>
+        </file>
+        <file>
           <filename>epm/shelves/cgi/exportshelf</filename>
           <mime_type>text/plain</mime_type>
           <hash>e925d4c8e4da3920bdb72c316eaee4cb</hash>
           <hash_type>MD5</hash_type>
           <filesize>3282</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3827'>
-          <fileid>3827</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelf</filename>
           <mime_type>text/plain</mime_type>
           <hash>29956664e86060cb28e31081ed1bbc38</hash>
           <hash_type>MD5</hash_type>
           <filesize>678</filesize>
-          <mtime>2012-07-02 11:43:52</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3828'>
-          <fileid>3828</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/add</filename>
           <mime_type>text/plain</mime_type>
           <hash>12fcb723ed64674ec33144e8f8fff924</hash>
           <hash_type>MD5</hash_type>
           <filesize>1459</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3829'>
-          <fileid>3829</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/add_search_results</filename>
           <mime_type>text/plain</mime_type>
           <hash>e1e5b8fc5503815e3506bc3c3b612d75</hash>
           <hash_type>MD5</hash_type>
           <filesize>2141</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3830'>
-          <fileid>3830</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/create</filename>
           <mime_type>text/plain</mime_type>
           <hash>122a7b1ba9abedecdf6c0f1268e6f29d</hash>
           <hash_type>MD5</hash_type>
           <filesize>977</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3831'>
-          <fileid>3831</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/empty</filename>
           <mime_type>text/plain</mime_type>
           <hash>956bd6bdfabaaf6750b0b091b587c5d1</hash>
           <hash_type>MD5</hash_type>
           <filesize>1269</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3832'>
-          <fileid>3832</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/init</filename>
           <mime_type>text/plain</mime_type>
           <hash>df98c145656454f5fe69b1770b49decf</hash>
           <hash_type>MD5</hash_type>
           <filesize>759</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3833'>
-          <fileid>3833</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/load</filename>
           <mime_type>text/plain</mime_type>
           <hash>868a93bb47424f2631e281a9fefb7c61</hash>
           <hash_type>MD5</hash_type>
           <filesize>1567</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3834'>
-          <fileid>3834</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/remove</filename>
           <mime_type>text/plain</mime_type>
           <hash>e1e7a6211849ca15501963cdc2f3413e</hash>
           <hash_type>MD5</hash_type>
           <filesize>1401</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3835'>
-          <fileid>3835</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/search</filename>
           <mime_type>text/plain</mime_type>
           <hash>e3d6d01be70eccfa8950319b52a55dfe</hash>
           <hash_type>MD5</hash_type>
           <filesize>1877</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3836'>
-          <fileid>3836</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/select</filename>
           <mime_type>text/plain</mime_type>
           <hash>ee68796473a701f23427031b95415fab</hash>
           <hash_type>MD5</hash_type>
           <filesize>916</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3837'>
-          <fileid>3837</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/show_all</filename>
           <mime_type>text/plain</mime_type>
           <hash>e58cbd4af1107729e3ef44c5b578c659</hash>
           <hash_type>MD5</hash_type>
           <filesize>1313</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3838'>
-          <fileid>3838</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>epm/shelves/cgi/shelves/show_all_with_eprint</filename>
           <mime_type>text/plain</mime_type>
           <hash>d05e481503c40f778839ba30f69a050d</hash>
           <hash_type>MD5</hash_type>
           <filesize>2089</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3839'>
-          <fileid>3839</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>lang/en/phrases/shelves.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>fd39a07fbb2eed5893f52e118424f8f9</hash>
           <hash_type>MD5</hash_type>
           <filesize>11386</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3840'>
-          <fileid>3840</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/MetaField/Username.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>a96c4160677e75c764d5a94dda797260</hash>
           <hash_type>MD5</hash_type>
           <filesize>3802</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3841'>
-          <fileid>3841</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/AddToShelf.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>68fbe9f328a239cb64dbed8d9111bcf8</hash>
           <hash_type>MD5</hash_type>
           <filesize>6871</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3842'>
-          <fileid>3842</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
+          <filename>plugins/EPrints/Plugin/Screen/EPMC/Shelves.pm</filename>
+          <mime_type>inode/symlink</mime_type>
+          <hash>8a10de8d81c19b2c8cc9698c0ffe9804</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1930</filesize>
+        </file>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/NewShelf.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>76ead3d4d096a735e221b713998ce3b7</hash>
           <hash_type>MD5</hash_type>
           <filesize>1447</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3843'>
-          <fileid>3843</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Public/Shelf.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>035bebfe2523919cb6cabbed2c98b36e</hash>
           <hash_type>MD5</hash_type>
           <filesize>6469</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3844'>
-          <fileid>3844</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8b28281e56574ce7c5993a4747758595</hash>
           <hash_type>MD5</hash_type>
           <filesize>2929</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3845'>
-          <fileid>3845</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/AccessRights.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>28410f3749464b53226b3e24c91b3efd</hash>
           <hash_type>MD5</hash_type>
           <filesize>691</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3846'>
-          <fileid>3846</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/Actions.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8500d4be02970eeca469961df3ed6db8</hash>
           <hash_type>MD5</hash_type>
           <filesize>603</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3847'>
-          <fileid>3847</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>6fb77d3ba093fd1929e7d3f8dc0e69a0</hash>
           <hash_type>MD5</hash_type>
           <filesize>1725</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3848'>
-          <fileid>3848</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint/Hide.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>7acb05fe4232d9f115b679557bd01447</hash>
           <hash_type>MD5</hash_type>
           <filesize>1216</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3849'>
-          <fileid>3849</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint/MoveDown.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>9c95e02c9e6910428d64056d8f50e802</hash>
           <hash_type>MD5</hash_type>
           <filesize>1953</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3850'>
-          <fileid>3850</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint/MoveUp.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8f4185e4503e77539b25bb64fbaa0af2</hash>
           <hash_type>MD5</hash_type>
           <filesize>1870</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3851'>
-          <fileid>3851</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint/RemoveSingle.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>9d9f36ab9b7c52136c8490316c7bf3da</hash>
           <hash_type>MD5</hash_type>
           <filesize>1717</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3852'>
-          <fileid>3852</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EPrint/Show.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>7a200dd5096690838d3465a7913887b0</hash>
           <hash_type>MD5</hash_type>
           <filesize>1219</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3853'>
-          <fileid>3853</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EditItems.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>41093314a0aacc2b4ad0f6a14d0cb1bb</hash>
           <hash_type>MD5</hash_type>
           <filesize>8803</filesize>
-          <mtime>2012-07-02 11:43:53</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3854'>
-          <fileid>3854</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EditItemsActions.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>bbd416214106e2d30f69679707bf6cd9</hash>
           <hash_type>MD5</hash_type>
           <filesize>5206</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3855'>
-          <fileid>3855</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/EditMetadata.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>f2aae2bfd581d89e7af727a593979b43</hash>
           <hash_type>MD5</hash_type>
           <filesize>3638</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3856'>
-          <fileid>3856</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/Remove.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>2f848e499082136f247aafcf03fcbcf4</hash>
           <hash_type>MD5</hash_type>
           <filesize>1917</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3857'>
-          <fileid>3857</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelf/View.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>676da684d94a7fbcc9acb9b5c72a6097</hash>
           <hash_type>MD5</hash_type>
           <filesize>2113</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3858'>
-          <fileid>3858</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Shelves.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>029d6dfdb8c24e9bbe321232c8f59127</hash>
           <hash_type>MD5</hash_type>
           <filesize>12091</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3859'>
-          <fileid>3859</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>plugins/EPrints/Plugin/Screen/Staff/ShelfSearch.pm</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>37c0b9a76fb0127d2330f3b4eda01555</hash>
           <hash_type>MD5</hash_type>
           <filesize>1179</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3860'>
-          <fileid>3860</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/images/epm/shelves.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>6751ea728b798d0f760642c6c50dd0d3</hash>
           <hash_type>MD5</hash_type>
           <filesize>61501</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3861'>
-          <fileid>3861</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/javascript/auto/shelves.js.min.js</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>51afdab23d2accc3bd376e88d5b563a0</hash>
           <hash_type>MD5</hash_type>
           <filesize>23826</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3862'>
-          <fileid>3862</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/javascript/shelves.js</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>99a1122534980f94eb4465a70b1604cc</hash>
           <hash_type>MD5</hash_type>
           <filesize>35306</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3863'>
-          <fileid>3863</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_add.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>f1eed3e89254ff1b9a684046b6c86cf1</hash>
           <hash_type>MD5</hash_type>
           <filesize>1683</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3864'>
-          <fileid>3864</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_contents.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8b26416a2ed975e6c26879c3a665aa05</hash>
           <hash_type>MD5</hash_type>
           <filesize>1095</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3865'>
-          <fileid>3865</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_destroy.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>4055bb9e11fffe3ee8155ea549ac262a</hash>
           <hash_type>MD5</hash_type>
           <filesize>1694</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3866'>
-          <fileid>3866</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_metadata.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8cbb41e833a78abc62c705a5c00f691d</hash>
           <hash_type>MD5</hash_type>
           <filesize>1669</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3867'>
-          <fileid>3867</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_rights.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>2fd9745b5dfd558f1401b195c647f213</hash>
           <hash_type>MD5</hash_type>
           <filesize>2539</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3868'>
-          <fileid>3868</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_shelf_view.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>373c213da7b7e1f8570d9dc0dd251ee4</hash>
           <hash_type>MD5</hash_type>
           <filesize>980</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3869'>
-          <fileid>3869</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_unpack.png</filename>
-          <mime_type>image/png</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>adcd69f764a142b5bbc100ea361302b9</hash>
           <hash_type>MD5</hash_type>
           <filesize>1389</filesize>
-          <mtime>2012-07-02 11:43:54</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3870'>
-          <fileid>3870</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_up.png</filename>
-          <mime_type>image/png</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>099102fc36d23ee441c1543397c9fea8</hash>
           <hash_type>MD5</hash_type>
           <filesize>1144</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3871'>
-          <fileid>3871</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/action_view.png</filename>
-          <mime_type>image/png</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>1a84a67a442da3276a06349c57d0cdc6</hash>
           <hash_type>MD5</hash_type>
           <filesize>1698</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3872'>
-          <fileid>3872</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/add_to_shelf.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>8dcfe05b18255c18b7cac2e355c9ea94</hash>
           <hash_type>MD5</hash_type>
           <filesize>1527</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3873'>
-          <fileid>3873</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/tool_add_to_shelf.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>ca6dc6ffd5aa845cb2c50e7ad6fc915c</hash>
           <hash_type>MD5</hash_type>
           <filesize>3454</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3874'>
-          <fileid>3874</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>static/style/images/tool_add_to_shelf_16.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>84603f8c444b3e06694d5efbd9e9cd8f</hash>
           <hash_type>MD5</hash_type>
           <filesize>1515</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3875'>
-          <fileid>3875</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>workflows/shelf/admin.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>f367811f43f28018d6e095a5f8273449</hash>
           <hash_type>MD5</hash_type>
           <filesize>451</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
-        <file id='http://researchdata.localdomain/id/file/3876'>
-          <fileid>3876</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1023</objectid>
+        <file>
           <filename>workflows/shelf/default.xml</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>62c1c725bf24fb53b704873322f6c93e</hash>
           <hash_type>MD5</hash_type>
           <filesize>376</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
       </files>
-      <eprintid>211</eprintid>
-      <pos>1</pos>
-      <placement>1</placement>
-      <mime_type>application/x-symlink</mime_type>
+      <mime_type>inode/symlink</mime_type>
       <format>other</format>
-      <language>en</language>
-      <security>public</security>
       <main>workflows/shelf/default.xml</main>
       <content>install</content>
     </document>
-    <document id='http://researchdata.localdomain/id/document/1024'>
-      <docid>1024</docid>
-      <rev_number>1</rev_number>
+    <document>
       <files>
-        <file id='http://researchdata.localdomain/id/file/3877'>
-          <fileid>3877</fileid>
-          <datasetid>document</datasetid>
-          <objectid>1024</objectid>
+        <file>
           <filename>static/images/epm/shelves.png</filename>
-          <mime_type>application/x-symlink</mime_type>
+          <mime_type>inode/symlink</mime_type>
           <hash>6751ea728b798d0f760642c6c50dd0d3</hash>
           <hash_type>MD5</hash_type>
           <filesize>61501</filesize>
-          <mtime>2012-07-02 11:43:55</mtime>
         </file>
       </files>
-      <eprintid>211</eprintid>
-      <pos>2</pos>
-      <placement>2</placement>
-      <mime_type>application/x-symlink</mime_type>
       <format>image</format>
-      <language>en</language>
-      <security>public</security>
       <main>static/images/epm/shelves.png</main>
       <content>coverimage</content>
     </document>
   </documents>
   <version>1.0.1</version>
+  <controller>EPMC::Shelves</controller>
   <creators>
     <item>
       <name>
